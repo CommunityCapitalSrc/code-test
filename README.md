@@ -1,4 +1,4 @@
-# Noumena-Web
+# Noumena FE Code Test
 
 ### How to install
 
