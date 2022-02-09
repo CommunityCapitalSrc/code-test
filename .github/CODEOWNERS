@@ -1,0 +1,8 @@
+package.json @richardx0
+yarn.lock @richardx0
+tsconfig.js @richardx0
+vite.config.ts @richardx0
+.github/CODEOWNERS richardx0
+.eslintrc @richardx0
+.eslintignore @richardx0
+.prettierrc.json @richardx0

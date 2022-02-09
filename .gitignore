@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# node.js
+#
+node_modules/
+npm-debug.*
+
+# Bundle artifact
+*.jsbundle
+
+#JEST
+.jest/cache/*
+coverage/*
+tests/app-release.apk
+tests/automation.log
+.history
+tests/**/*.png
+
+#STORYBOOK
+build-storybook.log
+
+#VIM
+*.swp
+
+#OTHER
+.DS_Store
+dist
+dist-ssr
+*.local
+yarn-error.log
+
+

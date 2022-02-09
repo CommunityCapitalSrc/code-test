@@ -1,0 +1,5 @@
+{
+  "testFiles": "**/*.spec.tsx",
+  "componentFolder": "cypress/components",
+  "integrationFolder": "cypress/e2e"
+}

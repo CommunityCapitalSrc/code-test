@@ -1,0 +1,45 @@
+# .github/workflows/ui-tests.yml
+name: 'UI Tests'
+
+on: push
+
+jobs:
+  # Run interaction and accessibility tests with Axe
+  interaction-and-accessibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn
+      - name: Run test
+        run: yarn test
+  # Run visual and composition tests with Chromatic
+  visual-and-composition:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Required to retrieve git history
+      - name: Install dependencies
+        run: yarn
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # Grab this from the Chomatic manage page
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+  # Run user flow tests with Cypress
+  # user-flow:
+    #runs-on: ubuntu-latest
+    # container: cypress/browsers:node16.13.0-chrome95-ff96
+    # steps:
+      #- name: Checkout
+      # uses: actions/checkout@v2
+
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      # - name: Cypress run
+      #uses: cypress-io/github-action@v2
+        #with:
+          # Specify Browser since container image is compile with Firefox
+          #browser: chrome

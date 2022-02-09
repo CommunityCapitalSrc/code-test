@@ -1,0 +1,4 @@
+{
+  "noumena.default.brand_name": "Noumena",
+  "noumena.dashboard.welcome_title": "Welcome to {{brandName}}"
+}

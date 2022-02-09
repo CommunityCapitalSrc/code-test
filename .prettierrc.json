@@ -1,0 +1,14 @@
+{
+  "singleQuote": true,
+  "importOrder": [
+    "^react$",
+    "^react",
+    "^(?!react)\\w+$",
+    "^@",
+    "^[A-Za-z_@][.]*",
+    "",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "trailingComma": "all"
+}
