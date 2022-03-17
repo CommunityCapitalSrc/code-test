@@ -1,9 +1,13 @@
+export const Page = ({ pageNumber }: { pageNumber: number }) => (
+  <div>Page {pageNumber}</div>
+);
+
 export const Wizard = () => (
   <div>
     <div>
-      <div>Page 1</div>
-      <div>Page 2</div>
-      <div>Page 3</div>
+      <Page pageNumber={1} />
+      <Page pageNumber={2} />
+      <Page pageNumber={3} />
     </div>
     <div>
       <button type="button">Next Page</button>

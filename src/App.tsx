@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '@/components/Button/Button';
+import { Wizard } from '@/components/Wizard/Wizard';
 import { identify } from '@/helpers/util';
 
 const Wrapper = styled.div`
@@ -8,9 +8,13 @@ const Wrapper = styled.div`
 
 function App() {
   const shouldBeAString = identify('Submit');
+  // const shouldBeANumber = identify(123);
+
   return (
     <Wrapper className="App">
-      <Button>{shouldBeAString}</Button>
+      <Wizard />
+      <div style={{ display: 'none' }}>{shouldBeAString}</div>
+      {/* <div style={{ display: 'none'}}>{shouldBeANumber}</div> */}
     </Wrapper>
   );
 }
